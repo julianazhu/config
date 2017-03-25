@@ -1,0 +1,52 @@
+*******************************************************************************
+*			             LIST OF USEFUL VIM COMMANDS:			 	     	  *
+*******************************************************************************
+
+PAGE NAVIGATION 
+*******************************************************************************
+shift + g					# Jump to the bottom of the page
+	- o 					# insert from the next line
+
+
+
+MOVING TEXT AROUND
+*******************************************************************************
+ctrl + V 					# Visual Block
+yy							# yank
+dd							# delete OR cut
+p 							# paste (into the line underneath)
+:m80						# move 
+
+
+FIND & REPLACE 
+*******************************************************************************
+:%s/foo/bar/g
+Find each occurrence of 'foo' (in all lines), and replace it with 'bar'.
+
+:%s/foo/bar/gc
+Change each 'foo' to 'bar', but ask for confirmation first.
+
+
+
+SPELLCHECKING
+*******************************************************************************
+:setlocal spell spelllang=en_au			# turn on spellchecking
+	- ]s 								# go to the next mispelled word
+	- [s 								# go to the last mispelled word
+		- z=							# auto suggest correct spelling
+
+:set nospell							# turn off spellchecking
+
+
+FORMATTING
+*******************************************************************************
+:set textwidth=80			# hard-wraps the file lines to 80 chars (note this inserts \n's)
+gqip						# wrap the current paragraph according to textwidth
+
+
+CSCOPE COMMANDS
+*******************************************************************************
+ctrl + \ + s 				# find all references to the symbol - MUST BE QUICK
+ctrl + \ + g 				# find the definition of the symbol - MUST BE QUICK
+ctrl + t 					# move backwards through the trail
+ctrl + d 					# exit cscope
