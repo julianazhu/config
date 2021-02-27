@@ -12,7 +12,7 @@ export PROMPT_DIRTRIM=2
 
 ## Aliases
 # Python
-alias p3='python3'
+alias p3='python3.6'
 
 # Rails
 alias be='bundle exec'
